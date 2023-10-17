@@ -1,0 +1,5 @@
+$app-prefix: demo-collection;
+
+@function PREFIX_NAME_WRAPPER($name) {
+    @return #{$app-prefix}-#{$name};
+}

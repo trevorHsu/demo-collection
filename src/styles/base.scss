@@ -1,0 +1,40 @@
+.vertical-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-wrap: anywhere;
+    box-sizing: border-box;
+    padding-right: 10px;
+
+    $bar-width: 4px;
+    $big-bar-width: 8px;
+
+    &::-webkit-scrollbar{
+        width: $bar-width;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        border-radius: calc($bar-width / 2);
+        background: #5b5b5b;
+    }
+
+    &::-webkit-scrollbar-track{
+        border-radius: calc($bar-width / 2);
+        background: #efefef1e;
+        transform: .2s;
+    }
+
+    &:hover {
+        &::-webkit-scrollbar{
+            width: $big-bar-width;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            border-radius: calc($big-bar-width / 2);
+        }
+
+        &::-webkit-scrollbar-track{
+            border-radius: calc($big-bar-width / 2);
+            background: #efefef1e;
+        }
+    }
+}
